@@ -1,0 +1,322 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: "Inter";
+  /*  background-color: #fff; */
+}
+
+/* --- FONTS ---- */
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-VariableFont_slnt,wght.ttf);
+}
+@font-face {
+  font-family: "InterEB";
+  src: url(/assets/fonts/static/Inter-ExtraBold.ttf);
+}
+
+@font-face {
+  font-family: "InterB";
+  src: url(/assets/fonts/static/Inter-Bold.ttf);
+}
+
+body {
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+p,
+h1 {
+  font-size: 0.9em;
+}
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+  padding: 1em 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Navigation bar Styling */
+.navbar {
+  position: relative;
+}
+
+.nav-content {
+  display: none;
+}
+
+.dd-btn {
+  cursor: pointer;
+}
+
+.nav-bar {
+  position: absolute;
+  background-color: #fff;
+  z-index: 10;
+  min-height: 100vh;
+
+  width: 250px;
+  top: -27px;
+  padding: 1.5em 1.5em 0 0.5em;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 00px 10px 50px 3px rgba(0, 0, 0, 0.5);
+
+  animation: myAnimation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes myAnimation {
+  from {
+    left: 50px;
+  }
+  to {
+    left: -185px;
+  }
+}
+.close-btn {
+  align-self: flex-end;
+  padding-bottom: 3em;
+  cursor: pointer;
+}
+
+li {
+  list-style-type: none;
+  padding: 1em 0;
+  font-size: 1.3em;
+  color: hsl(240, 100%, 5%);
+  font-weight: 800;
+}
+
+li:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.hero-image {
+  padding: 2em 0;
+}
+
+.hero-image img:nth-child(2) {
+  display: none;
+}
+
+.hero h1 {
+  font-family: "InterEB";
+  font-size: 3.2em;
+  color: hsl(240, 100%, 5%);
+  line-height: 1em;
+}
+
+.hero-texts p {
+  color: hsl(236, 13%, 42%);
+  padding: 1em 0;
+  line-height: 2em;
+  font-weight: bold;
+}
+.read-more {
+  padding: 2em 0;
+}
+.btn-rm {
+  padding: 1.5em 3em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: hsl(36, 100%, 99%);
+  border: none;
+  background-color: hsl(5, 85%, 63%);
+  letter-spacing: 6px;
+  cursor: pointer;
+}
+
+.btn-rm:hover {
+  background-color: #000;
+}
+
+.new {
+  background-color: hsl(240, 100%, 5%);
+  padding: 1em 0;
+  margin: 2em 0;
+  color: #fff;
+}
+
+.new-title-head {
+  color: hsl(35, 77%, 62%);
+  padding-bottom: 0.3em;
+  font-size: 3.2em;
+  font-family: "InterEB";
+}
+
+.text {
+  padding: 0.5em 0;
+}
+
+.text h1 {
+  font-family: "InterEB";
+  font-size: 1.5em;
+  padding: 0.5em 0;
+  cursor: pointer;
+}
+.text h1:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.text p {
+  color: hsl(233, 8%, 79%);
+  font-weight: 400;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  padding-bottom: 1.2em;
+}
+.text:first-child,
+.text:nth-child(2) {
+  border-bottom: 0.5px solid hsl(233, 8%, 79%);
+}
+.footer img {
+  max-width: 100%;
+}
+.footer {
+  padding: 1.8em 0;
+}
+.col {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-bottom: 1em;
+}
+.footer-image {
+  width: 30%;
+}
+
+.footer-text {
+  width: 60%;
+  align-self: center;
+}
+.footer-text h1 {
+  color: hsl(233, 8%, 79%);
+  font-family: "InterEB";
+  font-size: 3em;
+  padding-bottom: 0.3em;
+}
+
+.footer h2 {
+  font-family: "InterB";
+  font-size: 1.5em;
+  color: hsl(240, 100%, 5%);
+  padding-bottom: 0.3em;
+  cursor: pointer;
+}
+
+.footer h2:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.footer p {
+  font-size: 1.2em;
+  line-height: 1.5em;
+  font-weight: 400;
+  color: hsl(240, 100%, 5%);
+}
+
+.hidden {
+  display: none;
+}
+
+/* ---FOOTER STYLING ----*/
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* MEDIA QUERY FOR SCREENS BIGGER THAN 500PX */
+
+@media (min-width: 500px) {
+  .dd-btn {
+    display: none;
+  }
+  .nav-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 1.5em;
+  }
+  .nav-content a {
+    color: hsl(240, 100%, 5%);
+    text-decoration: none;
+    font-size: 1.2em;
+  }
+  a:hover {
+    color: hsl(5, 85%, 63%);
+  }
+
+  .hero-image img:first-child {
+    display: none;
+  }
+  .hero-image img:nth-child(2) {
+    display: block;
+    min-height: 15vh;
+  }
+  .flex-row {
+    display: flex;
+    gap: 1.5em;
+  }
+  .new {
+    width: 120%;
+  }
+  .hero {
+  }
+  .hero-texts {
+    display: flex;
+    gap: 1em;
+  }
+  .hero-texts h1 {
+    font-size: 2.9em;
+  }
+  .text-btn {
+    width: 150%;
+  }
+  .text-btn p {
+    line-height: 2em;
+  }
+  .read-more {
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 1em;
+  }
+
+  .footer {
+    display: flex;
+  }
+  .footer-image img {
+    max-width: 100%;
+    /*   height: 100%;*/
+  }
+  .footer-image {
+    align-self: center;
+  }
+  .footer-text {
+    width: 65%;
+  }
+  .col {
+    display: flex;
+  }
+  .footer-text h1 {
+    font-size: 2em;
+  }
+  .footer p {
+    font-size: 1em;
+  }
+}
